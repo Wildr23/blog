@@ -10,4 +10,10 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public $allCategories ;
+
+    public function __construct()
+    {
+        $this->allCategories = \App\Category::distinct()->get();
+    }
 }

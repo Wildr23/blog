@@ -16,11 +16,11 @@
           <!-- Blog Post -->
           @foreach ($posts as $item)
           <div class="card mb-4">
-          <img class="card-img-top" src="{{$item->img}}" alt="Card image cap">
+          <img class="card-img-top" src="{{Storage::url($item->img)}}" alt="Card image cap">
                 <div class="card-body">
                   <h2 class="card-title">{{$item->title}}</h2>
                   <p class="card-text">{{$item->body}}</p>
-                  <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                  <a href="{{route('post',$item->id)}}" class="btn btn-raised btn-primary">Read More &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
                         Posted: {{$item->created_at}}<br>

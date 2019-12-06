@@ -18,7 +18,7 @@
         <!-- Blog Posts -->
         @foreach ($posts as $item)
         <div class="card mb-4">
-            <img class="card-img-top" src="{{$item->img}}" alt="Card image cap">
+            <img class="card-img-top" src="{{Storage::url($item->img)}}" alt="Card image cap">
             <div class="card-body">
                 <h2 class="card-title">{{$item->title}}</h2>
                 <p class="card-text">{{$item->body}}</p>

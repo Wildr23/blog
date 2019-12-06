@@ -11,7 +11,7 @@
 
     <!-- Blog Post -->
     <div class="card mb-4">
-        <img class="card-img-top" src="{{$post->img}}" alt="Card image cap">
+        <img class="card-img-top" src="{{Storage::url($post->img)}}" alt="Card image cap">
         <div class="card-body">
             <p class="card-text">{{$post->body}}</p>
         </div>
